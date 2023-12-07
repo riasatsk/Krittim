@@ -7,7 +7,7 @@
 	let phone;
 	async function handleCreateSchool() {
 		clicked = true;
-		const response = await fetch('api/add-school', {
+		const response = await fetch('/api/add-school', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json'
