@@ -6,7 +6,7 @@ export const load = async (loadEvent) => {
 	if (!token) {
 		return goto('/login');
 	}
-	const response = await fetch('/api/', {
+	const response = await fetch('https://krittim-backend.onrender.com', {
 		method: 'GET',
 		headers: {
 			Authorization: `Bearer ` + token
