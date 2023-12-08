@@ -6,7 +6,7 @@ export default defineConfig({
 	server: {
 		proxy: {
 			'/api': {
-				target: 'https://krittim-backend.onrender.com/',
+				target: 'https://krittim-backend.onrender.com',
 				changeOrigin: true,
 				rewrite: (path) => path.replace(/^\/api/, '')
 			}
