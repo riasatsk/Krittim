@@ -4,7 +4,7 @@ export const load = async (loadEvent) => {
 	const page = url.searchParams.get('page') || 1;
 	depends('reload:events');
 	const token = window.localStorage.getItem('jwt-Token');
-	const response = await fetch('/api/events/?page=' + page, {
+	const response = await fetch('https://krittim-backend.onrender.com/events/?page=' + page, {
 		method: 'GET',
 		headers: {
 			Authorization: `Bearer ` + token
