@@ -1,7 +1,7 @@
 export const load = async (loadEvent) => {
 	const { fetch } = loadEvent;
 	const token = window.localStorage.getItem('jwt-Token');
-	const response = await fetch('/api/expense/count', {
+	const response = await fetch('https://krittim-backend.onrender.com/expense/count', {
 		method: 'GET',
 		headers: {
 			Authorization: `Bearer ` + token
