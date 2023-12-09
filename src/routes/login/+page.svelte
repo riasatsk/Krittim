@@ -1,7 +1,7 @@
 <script>
 	import { goto } from '$app/navigation';
 	let show = false;
-	let email = admin@demo.com;
+	let email = 'admin@demo.com';
 	let password = 12345678;
 	async function handleLogin() {
 		show = true;
