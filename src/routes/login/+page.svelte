@@ -1,8 +1,8 @@
 <script>
 	import { goto } from '$app/navigation';
 	let show = false;
-	let email;
-	let password;
+	let email = admin@demo.com;
+	let password = 12345678;
 	async function handleLogin() {
 		show = true;
 		const response = await fetch('https://krittim-backend.onrender.com/login', {
@@ -38,7 +38,7 @@
 		</button>
 		<div class="buttom flex gap-2">
 			<a class="add" href="/add-school">New School</a> |
-			<a class="forgot" href="/forgot-password">Forgot Password</a>
+			<a class="forgot" href="/login">Forgot Password</a>
 		</div>
 	</div>
 </div>
