@@ -1,4 +1,5 @@
 <script>
+	import { goto } from '$app/navigation';
 	let clicked = false;
 	let schoolName;
 	let userName;
@@ -23,6 +24,7 @@
 
 		const user = await response.json();
 		console.log('Success');
+                goto('/login');
 	}
 </script>
 
