@@ -1,8 +1,8 @@
 <script>
 	import { goto } from '$app/navigation';
 	let show = false;
-	let email = 'riasatsk@email.com';
-	let password = 123456;
+	let email;
+	let password;
 	async function handleLogin() {
 		show = true;
 		const response = await fetch('https://krittim-backend.onrender.com/login', {
@@ -15,6 +15,27 @@
 		const token = await response.json();
 		localStorage.setItem('jwt-Token', token.token);
 		goto('/');
+	}
+	let copy1 = false;
+	let copy2 = false;
+	function copyToClipboard(text) {
+		// Create a temporary textarea element
+		const textarea = document.createElement('textarea');
+
+		// Set the value of the textarea to the text you want to copy
+		textarea.value = text;
+
+		// Append the textarea to the DOM
+		document.body.appendChild(textarea);
+
+		// Select the text inside the textarea
+		textarea.select();
+
+		// Copy the selected text to the clipboard
+		document.execCommand('copy');
+
+		// Remove the temporary textarea from the DOM
+		document.body.removeChild(textarea);
 	}
 </script>
 
@@ -39,6 +60,38 @@
 		<div class="buttom flex gap-2">
 			<a class="add" href="/add-school">New School</a> |
 			<a class="forgot" href="/login">Forgot Password</a>
+		</div>
+		<div class="logincred flex gap-4">
+			<div class="flex gap-1 items-center">
+				<div class="font-mono">Email: riasatsk@email.com</div>
+				<button
+					style="height: 20px; width: 20px;"
+					on:click={() => {
+						copyToClipboard('riasatsk@email.com');
+						copy1 = true;
+					}}
+					>{#if copy1}
+						<img src="/tick.svg" alt="Tick SVG" />
+					{:else}
+						<img src="/copy.svg" alt="Copy SVG" />
+					{/if}</button
+				>
+			</div>
+			<div class="flex gap-1 items-center">
+				<div class="font-mono">Password: 123456</div>
+				<button
+					style="height: 20px; width: 20px;"
+					on:click={() => {
+						copyToClipboard('123456');
+						copy2 = true;
+					}}
+					>{#if copy2}
+						<img src="/tick.svg" alt="Tick SVG" />
+					{:else}
+						<img src="/copy.svg" alt="Copy SVG" />
+					{/if}</button
+				>
+			</div>
 		</div>
 	</div>
 </div>

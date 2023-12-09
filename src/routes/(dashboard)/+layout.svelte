@@ -2,7 +2,7 @@
 	import { goto } from '$app/navigation';
 	import Logout from '../../lib/Dialog/Logout.svelte';
 	import SidebarNav from '../../lib/layout/SidebarNav.svelte';
-	let currentTheme = localStorage.getItem('theme') || 'forest';
+	let currentTheme = localStorage.getItem('theme') || 'corporate';
 
 	function handleLogout() {
 		localStorage.removeItem('jwt-Token');
