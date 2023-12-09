@@ -61,7 +61,7 @@
 						class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52"
 					>
 						<li>
-							<a class="justify-between" href="/profile"> Profile </a>
+							<a class="justify-between" href="/"> Profile </a>
 						</li>
 						<li><button on:click={handleLogout}>Logout</button></li>
 					</ul>
