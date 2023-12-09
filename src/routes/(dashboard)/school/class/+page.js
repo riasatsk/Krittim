@@ -2,7 +2,7 @@ export const load = async (loadEvent) => {
 	const { fetch, depends } = loadEvent;
 	const token = window.localStorage.getItem('jwt-Token');
 	depends('on:class');
-	const response = await fetch('http://localhost:3000/class', {
+	const response = await fetch('https://krittim-backend.onrender.com/class', {
 		method: 'GET',
 		headers: {
 			Authorization: `Bearer ` + token
