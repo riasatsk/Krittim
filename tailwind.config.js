@@ -10,16 +10,8 @@ export default {
 	plugins: [daisyui, form],
 	daisyui: {
 		themes: [
-			'light',
-			'dark',
 			'corporate',
 			'forest',
-			'lofi',
-			'black',
-			'business',
-			'acid',
-			'lemonade',
-			'winter'
 		]
 	}
 };
