@@ -18,7 +18,7 @@
 	let parentOrGurdainName;
 	let phone;
 	async function handleAdd() {
-		const response = await fetch('/api/add-student', {
+		const response = await fetch('https://krittim-backend.onrender.com/add-student', {
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/json',
