@@ -8,7 +8,7 @@ export const load = async (loadEvent) => {
 			Authorization: `Bearer ` + token
 		}
 	});
-	const responseOnGetTeachers = await fetch('/api/teacher', {
+	const responseOnGetTeachers = await fetch('https://krittim-backend.onrender.com/teacher', {
 		method: 'GET',
 		headers: {
 			Authorization: `Bearer ` + token
