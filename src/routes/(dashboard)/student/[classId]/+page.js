@@ -2,7 +2,7 @@ export const load = async (loadEvent) => {
 	const { fetch, params } = loadEvent;
     const {classId} = params
 	const token = window.localStorage.getItem('jwt-Token');
-	const response = await fetch(`/api/student/${classId}`, {
+	const response = await fetch(`https://krittim-backend.onrender.com/student/${classId}`, {
 		method: 'GET',
 		headers: {
 			Authorization: `Bearer ` + token
