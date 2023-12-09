@@ -1,8 +1,8 @@
 <script>
 	import { goto } from '$app/navigation';
 	let show = false;
-	let email = 'admin@demo.com';
-	let password = 12345678;
+	let email = 'riasatsk@email.com';
+	let password = 123456;
 	async function handleLogin() {
 		show = true;
 		const response = await fetch('https://krittim-backend.onrender.com/login', {
